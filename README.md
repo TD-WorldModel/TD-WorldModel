@@ -25,15 +25,38 @@ HTML layout is set up once and you don't touch it.
 `_layouts/` + `_includes/` (the HTML shell) and `static/css/index.css`
 (styling). Set up once; ignore them.
 
-## Preview locally (optional)
+## Install (one time)
+
+You need a modern Ruby. On macOS with [Homebrew](https://brew.sh):
+
+```bash
+brew install ruby
+```
+
+Add Homebrew's Ruby to your PATH (paste into `~/.zshrc`, then open a new terminal):
+
+```bash
+export PATH="/opt/homebrew/opt/ruby/bin:/opt/homebrew/lib/ruby/gems/4.0.0/bin:$PATH"
+```
+
+Then install the site's dependencies (run in this folder):
 
 ```bash
 bundle install
-bundle exec jekyll serve
-# http://localhost:4000/contrastive-wm-draft/
 ```
 
-No Ruby/Jekyll? Skip this — just push and GitHub builds it for you.
+Check it worked: `ruby -v` should print 4.x (not 2.6).
+
+## Preview locally (optional)
+
+```bash
+bundle exec jekyll serve --livereload
+# open http://localhost:4000/contrastive-wm-draft/
+```
+
+Edit `index.md`, save, and the page reloads automatically. Stop with `Ctrl-C`.
+
+No Ruby/Jekyll? Skip all this — just push and GitHub builds the site for you.
 
 ## Publish
 
