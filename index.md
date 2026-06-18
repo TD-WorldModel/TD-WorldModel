@@ -52,7 +52,7 @@ bibtex: |
 
 ## Abstract
 
-The fundamental objective of world modeling is to predict future states from actions and observations. Joint-embedding predictive architectures (JEPAs) offer a solution to representation learning for world modeling: by encoding both the observation and goal states, a JEPA may learn selective representations without being constrained to a pixel reconstruction objective.
+The fundamental objective of world modeling is to predict future states from actions and observations. Joint-embedding predictive architectures (JEPAs) offer a solution to representation learning for world modeling: by encoding both the observation and goal states, a JEPA may selectively learn abstract representations of the world.
 
 Write your abstract here. Everything below the `---` block is plain Markdown,
 so just write prose. Summarize the problem, your key idea (contrastive
