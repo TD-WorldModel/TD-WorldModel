@@ -12,11 +12,15 @@ layout: base
           {% if page.subtitle %}<h2 class="subtitle is-4 publication-subtitle">{{ page.subtitle }}</h2>{% endif %}
 
           {% if page.authors %}
+          {% assign has_equal = false %}
+          {% for a in page.authors %}{% if a.equal %}{% assign has_equal = true %}{% endif %}{% endfor %}
           <div class="is-size-5 publication-authors">
             {% for a in page.authors %}
-            <span class="author-block">
-              {% if a.url %}<a href="{{ a.url }}">{{ a.name }}</a>{% else %}{{ a.name }}{% endif %}{% if a.affiliations %}<sup>{{ a.affiliations }}</sup>{% endif %}{% unless forloop.last %},{% endunless %}
-            </span>
+            {% assign pi = forloop.index0 | minus: 1 %}
+            {% assign ni = forloop.index0 | plus: 1 %}
+            {% assign prev = page.authors[pi] %}
+            {% assign next = page.authors[ni] %}
+            {% if a.equal and forloop.first %}<span class="equal-brace">{</span>{% elsif a.equal and prev.equal != true %}<span class="equal-brace">{</span>{% endif %}<span class="author-block">{% if a.url %}<a href="{{ a.url }}">{{ a.name }}</a>{% else %}{{ a.name }}{% endif %}{% if a.affiliations %}<sup>{{ a.affiliations }}</sup>{% endif %}</span>{% if a.equal and forloop.last %}<span class="equal-brace">}</span>{% elsif a.equal and next.equal != true %}<span class="equal-brace">}</span>{% endif %}{% unless forloop.last %},{% endunless %}
             {% endfor %}
           </div>
           {% endif %}
@@ -27,6 +31,10 @@ layout: base
             <span class="author-block"><sup>{{ aff.id }}</sup>{{ aff.name }}</span>
             {% endfor %}
           </div>
+          {% endif %}
+
+          {% if has_equal %}
+          <div class="is-size-6 publication-authors equal-contrib"><span class="equal-brace">{ }</span> denotes equal contribution</div>
           {% endif %}
 
           {% if page.links %}

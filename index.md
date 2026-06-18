@@ -6,12 +6,14 @@ description: A project page for Contrastive World Models.
 
 # ---- Authors (the sup numbers map to the affiliations list below) ----
 authors:
-  - name: William Peng 
+  - name: William Peng
     url: "#"
     affiliations: "1"
-  - name: Holger Molin 
+    equal: true
+  - name: Holger Molin
     url: "#"
     affiliations: "1"
+    equal: true
   - name: Third Author
     url: "#"
     affiliations: "2"
@@ -49,6 +51,8 @@ bibtex: |
 ---
 
 ## Abstract
+
+The fundamental objective of world modeling is to predict future states from actions and observations. Joint-embedding predictive architectures (JEPAs) offer a solution to representation learning for world modeling: by encoding both the observation and goal states, a JEPA may learn selective representations without being constrained to a pixel reconstruction objective.
 
 Write your abstract here. Everything below the `---` block is plain Markdown,
 so just write prose. Summarize the problem, your key idea (contrastive
