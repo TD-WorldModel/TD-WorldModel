@@ -1,0 +1,89 @@
+---
+layout: base
+---
+
+<!-- ===================== HERO / TITLE ===================== -->
+<section class="hero">
+  <div class="hero-body">
+    <div class="container is-max-desktop">
+      <div class="columns is-centered">
+        <div class="column has-text-centered">
+          <h1 class="title is-1 publication-title">{{ page.title }}</h1>
+          {% if page.subtitle %}<h2 class="subtitle is-4 publication-subtitle">{{ page.subtitle }}</h2>{% endif %}
+
+          {% if page.authors %}
+          <div class="is-size-5 publication-authors">
+            {% for a in page.authors %}
+            <span class="author-block">
+              {% if a.url %}<a href="{{ a.url }}">{{ a.name }}</a>{% else %}{{ a.name }}{% endif %}{% if a.affiliations %}<sup>{{ a.affiliations }}</sup>{% endif %}{% unless forloop.last %},{% endunless %}
+            </span>
+            {% endfor %}
+          </div>
+          {% endif %}
+
+          {% if page.affiliations %}
+          <div class="is-size-5 publication-authors">
+            {% for aff in page.affiliations %}
+            <span class="author-block"><sup>{{ aff.id }}</sup>{{ aff.name }}</span>
+            {% endfor %}
+          </div>
+          {% endif %}
+
+          {% if page.links %}
+          <div class="column has-text-centered">
+            <div class="publication-links">
+              {% for link in page.links %}
+              <span class="link-block">
+                <a href="{{ link.url }}" class="external-link button is-normal is-rounded is-dark">
+                  {% if link.icon %}<span class="icon"><i class="{{ link.icon }}"></i></span>{% endif %}
+                  <span>{{ link.text }}</span>
+                </a>
+              </span>
+              {% endfor %}
+            </div>
+          </div>
+          {% endif %}
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== TEASER ===================== -->
+{% if page.teaser %}
+<section class="hero teaser">
+  <div class="container is-max-desktop">
+    <div class="hero-body">
+      {% if page.teaser contains '.mp4' or page.teaser contains '.webm' %}
+      <video autoplay muted loop playsinline style="width:100%;border-radius:10px;">
+        <source src="{{ page.teaser | relative_url }}">
+      </video>
+      {% else %}
+      <img src="{{ page.teaser | relative_url }}" style="width:100%;border-radius:10px;">
+      {% endif %}
+      {% if page.teaser_caption %}
+      <h2 class="subtitle has-text-centered" style="margin-top:1rem;">{{ page.teaser_caption }}</h2>
+      {% endif %}
+    </div>
+  </div>
+</section>
+{% endif %}
+
+<!-- ===================== MARKDOWN BODY ===================== -->
+<section class="section">
+  <div class="container is-max-desktop">
+    <div class="content markdown-body">
+      {{ content }}
+    </div>
+  </div>
+</section>
+
+<!-- ===================== BIBTEX ===================== -->
+{% if page.bibtex %}
+<section class="section" id="BibTeX">
+  <div class="container is-max-desktop content">
+    <h2 class="title is-3 has-text-centered">BibTeX</h2>
+    <pre><code>{{ page.bibtex }}</code></pre>
+  </div>
+</section>
+{% endif %}

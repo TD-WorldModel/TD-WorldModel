@@ -1,0 +1,22 @@
+# Site-wide Jekyll settings.
+# After editing this file, restart `jekyll serve` (it is not auto-reloaded).
+
+title: Contrastive World Models
+description: Contrastive is all you need.
+
+# IMPORTANT: for a GitHub *project* page served at
+# https://7peng.github.io/contrastive-wm-draft/ the baseurl must match the repo name.
+# If you later use a custom domain or a user page, set this to "".
+baseurl: "/contrastive-wm-draft"
+
+# Markdown engine
+markdown: kramdown
+kramdown:
+  input: GFM            # GitHub-flavored markdown (tables, fenced code, etc.)
+
+# Files Jekyll should not copy into the built site
+exclude:
+  - README.md
+  - Gemfile
+  - Gemfile.lock
+  - vendor
