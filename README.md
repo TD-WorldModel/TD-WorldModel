@@ -51,7 +51,7 @@ Check it worked: `ruby -v` should print 4.x (not 2.6).
 
 ```bash
 bundle exec jekyll serve --livereload
-# open http://localhost:4000/contrastive-wm-draft/
+# open http://localhost:4000/TD-WorldModel/
 ```
 
 Edit `index.md`, save, and the page reloads automatically. Stop with `Ctrl-C`.
@@ -65,7 +65,7 @@ git add -A && git commit -m "Update site" && git push origin main
 ```
 
 Once, in the repo: **Settings → Pages → Source: "Deploy from a branch" →
-`main` / `(root)`**. Published at `https://7peng.github.io/contrastive-wm-draft/`.
+`main` / `(root)`**. Published at `https://td-worldmodel.github.io/TD-WorldModel/`.
 
-> `baseurl` in `_config.yml` is `/contrastive-wm-draft` to match the repo name.
+> `baseurl` in `_config.yml` is `/TD-WorldModel` to match the repo name.
 > Change it if you rename the repo or use a custom domain.

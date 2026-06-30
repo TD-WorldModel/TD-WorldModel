@@ -1,6 +1,6 @@
 ---
 layout: project
-title: Contrastive is all you need
+title: Temporal Discriminative World Models
 subtitle:
 description: A project page for Contrastive World Models.
 
@@ -8,21 +8,16 @@ description: A project page for Contrastive World Models.
 authors:
   - name: William Peng
     url: "#"
-    affiliations: "1"
+    affiliations:
     equal: true
   - name: Holger Molin
     url: "#"
-    affiliations: "1"
+    affiliations:
     equal: true
-  - name: Third Author
-    url: "#"
-    affiliations: "2"
 
 affiliations:
-  - id: "1"
+  - id:
     name: Stanford University
-  - id: "2"
-    name: Collaborating Lab
 
 # ---- Buttons. Common icons: fas fa-file-pdf | ai ai-arxiv | fab fa-github | far fa-images ----
 links:

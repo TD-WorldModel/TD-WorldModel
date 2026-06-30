@@ -20,7 +20,7 @@ layout: base
             {% assign ni = forloop.index0 | plus: 1 %}
             {% assign prev = page.authors[pi] %}
             {% assign next = page.authors[ni] %}
-            {% if a.equal and forloop.first %}<span class="equal-brace">{</span>{% elsif a.equal and prev.equal != true %}<span class="equal-brace">{</span>{% endif %}<span class="author-block">{% if a.url %}<a href="{{ a.url }}">{{ a.name }}</a>{% else %}{{ a.name }}{% endif %}{% if a.affiliations %}<sup>{{ a.affiliations }}</sup>{% endif %}</span>{% if a.equal and forloop.last %}<span class="equal-brace">}</span>{% elsif a.equal and next.equal != true %}<span class="equal-brace">}</span>{% endif %}{% unless forloop.last %},{% endunless %}
+            {% if a.equal and forloop.first %}<span class="equal-brace">{</span><span class="equal-group">{% elsif a.equal and prev.equal != true %}<span class="equal-brace">{</span><span class="equal-group">{% endif %}<span class="author-block">{% if a.url %}<a href="{{ a.url }}">{{ a.name }}</a>{% else %}{{ a.name }}{% endif %}{% if a.affiliations %}<sup>{{ a.affiliations }}</sup>{% endif %}</span>{% if a.equal and forloop.last %}</span><span class="equal-brace">}</span>{% elsif a.equal and next.equal != true %}</span><span class="equal-brace">}</span>{% endif %}{% unless forloop.last %},{% endunless %}
             {% endfor %}
           </div>
           {% endif %}

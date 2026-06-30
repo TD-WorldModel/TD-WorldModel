@@ -24,5 +24,24 @@
   </div>
 </footer>
 
+<script>
+  // Randomize the order of equal-contribution authors on each page load.
+  document.addEventListener('DOMContentLoaded', function () {
+    document.querySelectorAll('.equal-group').forEach(function (group) {
+      var authors = Array.prototype.slice.call(group.querySelectorAll('.author-block'));
+      if (authors.length < 2) return;
+      for (var i = authors.length - 1; i > 0; i--) {
+        var j = Math.floor(Math.random() * (i + 1));
+        var tmp = authors[i]; authors[i] = authors[j]; authors[j] = tmp;
+      }
+      group.innerHTML = '';
+      authors.forEach(function (el, idx) {
+        if (idx > 0) group.appendChild(document.createTextNode(', '));
+        group.appendChild(el);
+      });
+    });
+  });
+</script>
+
 </body>
 </html>

@@ -5,9 +5,10 @@ title: Contrastive World Models
 description: Contrastive is all you need.
 
 # IMPORTANT: for a GitHub *project* page served at
-# https://7peng.github.io/contrastive-wm-draft/ the baseurl must match the repo name.
-# If you later use a custom domain or a user page, set this to "".
-baseurl: "/contrastive-wm-draft"
+# https://td-worldmodel.github.io/TD-WorldModel/ the baseurl must match the repo name.
+# If you later use a custom domain or rename the repo to TD-WorldModel.github.io
+# (an org page served at the root), set this to "".
+baseurl: "/TD-WorldModel"
 
 # Markdown engine
 markdown: kramdown
