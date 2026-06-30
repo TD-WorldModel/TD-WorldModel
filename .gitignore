@@ -3,3 +3,8 @@ _site/
 .jekyll-metadata
 .sass-cache/
 vendor/
+
+# LaTeX source archives — kept out of the site repo
+*.zip
+# Stray figure copy in repo root (the canonical one lives in static/images/)
+/patch_pc1_clean.png

@@ -21,3 +21,4 @@ exclude:
   - Gemfile
   - Gemfile.lock
   - vendor
+  - "*.zip"            # LaTeX source archive — keep it out of the published site

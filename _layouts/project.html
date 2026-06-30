@@ -37,6 +37,10 @@ layout: base
           <div class="is-size-6 publication-authors equal-contrib"><span class="equal-brace">{ }</span> denotes equal contribution</div>
           {% endif %}
 
+          {% if page.date %}
+          <div class="is-size-6 publication-date">{{ page.date }}</div>
+          {% endif %}
+
           {% if page.links %}
           <div class="column has-text-centered">
             <div class="publication-links">
@@ -50,6 +54,8 @@ layout: base
               {% endfor %}
             </div>
           </div>
+          {% elsif page.status %}
+          <div class="publication-status">{{ page.status }}</div>
           {% endif %}
         </div>
       </div>
@@ -63,14 +69,14 @@ layout: base
   <div class="container is-max-desktop">
     <div class="hero-body">
       {% if page.teaser contains '.mp4' or page.teaser contains '.webm' %}
-      <video autoplay muted loop playsinline style="width:100%;border-radius:10px;">
+      <video class="teaser-media" autoplay muted loop playsinline>
         <source src="{{ page.teaser | relative_url }}">
       </video>
       {% else %}
-      <img src="{{ page.teaser | relative_url }}" style="width:100%;border-radius:10px;">
+      <img class="teaser-media" src="{{ page.teaser | relative_url }}">
       {% endif %}
       {% if page.teaser_caption %}
-      <h2 class="subtitle has-text-centered" style="margin-top:1rem;">{{ page.teaser_caption }}</h2>
+      <p class="teaser-caption">{{ page.teaser_caption }}</p>
       {% endif %}
     </div>
   </div>

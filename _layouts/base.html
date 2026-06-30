@@ -24,6 +24,15 @@
   </div>
 </footer>
 
+<!-- MathJax: renders the \(...\) and \[...\] that kramdown emits from $...$ / $$...$$ -->
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Config({
+    tex2jax: { inlineMath: [['$','$'], ['\\(','\\)']] },
+    "HTML-CSS": { scale: 95 }
+  });
+</script>
+<script async src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/MathJax.js?config=TeX-AMS_CHTML"></script>
+
 <script>
   // Randomize the order of equal-contribution authors on each page load.
   document.addEventListener('DOMContentLoaded', function () {

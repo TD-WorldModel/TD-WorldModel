@@ -44,6 +44,18 @@ body {
   color: #7a7a7a;
 }
 
+.publication-date {
+  margin-top: 0.75rem;
+  color: #4a4a4a;
+}
+
+.publication-status {
+  margin-top: 1.5rem;
+  font-family: 'Google Sans', sans-serif;
+  font-style: italic;
+  color: #7a7a7a;
+}
+
 .publication-authors a:hover {
   text-decoration: underline;
 }
@@ -131,12 +143,45 @@ pre {
   text-align: justify;
 }
 
-/* Center and round figures */
+/* Center and round figures; keep in-text figures from spanning the full column */
 .markdown-body img {
   display: block;
-  margin: 1.5rem auto;
+  margin: 1.5rem auto 0.5rem;
+  width: 70%;
   max-width: 100%;
   border-radius: 10px;
+}
+
+/* Teaser figure under the title — kept compact and centered */
+.teaser-media {
+  display: block;
+  width: 55%;
+  max-width: 100%;
+  margin: 0 auto;
+  border-radius: 10px;
+}
+
+.teaser-caption {
+  margin: 1rem auto 0;
+  max-width: 80%;
+  text-align: center;
+  font-size: 0.9rem;
+  color: #6a6a6a;
+}
+
+/* Wide figures (e.g. multi-panel probes) span the full text column */
+.markdown-body img.wide {
+  width: 100%;
+}
+
+/* Italic line right after an image acts as a centered caption */
+.markdown-body img + em {
+  display: block;
+  text-align: center;
+  font-size: 0.9rem;
+  color: #6a6a6a;
+  margin: 0 auto 1.75rem;
+  max-width: 80%;
 }
 
 .markdown-body table {
