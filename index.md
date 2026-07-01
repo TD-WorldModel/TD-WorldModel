@@ -35,7 +35,7 @@ status: Paper in progress
 # Change `teaser_width` to resize the teaser figure (any CSS width, e.g. 80% or 640px).
 teaser: /static/images/main_figure.png
 teaser_width: 100%
-# teaser_caption: "Optional caption for the teaser figure."
+teaser_caption: "Temporal Discriminative training objective for JEPA world models."
 
 # ---- Citation (optional). Paper in progress; add a BibTeX entry when ready. ----
 # bibtex: |
