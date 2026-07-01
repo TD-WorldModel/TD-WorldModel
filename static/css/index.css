@@ -187,6 +187,22 @@ pre {
   width: 100%;
 }
 
+/* Callout box */
+.markdown-body blockquote.callout {
+  border: 1px solid #d6e4ff;
+  border-left: 4px solid hsl(204, 86%, 53%);
+  background: #f4f8ff;
+  border-radius: 8px;
+  padding: 1rem 1.25rem;
+  margin: 1.75rem 0;
+  color: #333;
+}
+
+.markdown-body blockquote.callout p {
+  margin: 0;
+  text-align: left;
+}
+
 /* Italic line right after an image acts as a centered caption */
 .markdown-body img + em {
   display: block;
