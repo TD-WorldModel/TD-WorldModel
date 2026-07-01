@@ -48,8 +48,6 @@ teaser_width: 100%
   The teaser figure at the top is sized by `teaser_width` in the front matter above.
 -->
 
-> **Work in progress.** This is preliminary work; sections will be expanded and the paper is coming soon.
-
 ## Motivating Issue
 
 The standard recipe for JEPA-style world models is by now familiar: an encoder, a next-latent predictor co-trained against it, and an anti-collapse regularizer to keep the encoder from collapsing to a trivial representation. Planning is L2 cost-to-go in latent space. [LeWorldModel](https://arxiv.org/abs/2603.19312) is a canonical instance with SIGReg as its anti-collapse regularizer. SIGReg constrains the geometry of the latent distribution by pushing embeddings toward an isotropic Gaussian, which is an elegant solution to trivial collapse. Yet when we tested it, it planned poorly, and the representation turned out to be the cause.
