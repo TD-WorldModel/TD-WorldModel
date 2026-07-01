@@ -37,6 +37,10 @@ layout: base
           <div class="is-size-6 publication-authors equal-contrib"><span class="equal-brace">{ }</span> denotes equal contribution</div>
           {% endif %}
 
+          {% if page.correspondence %}
+          <div class="is-size-6 publication-authors publication-correspondence">{{ page.correspondence }}</div>
+          {% endif %}
+
           {% if page.date %}
           <div class="is-size-6 publication-date">{{ page.date }}</div>
           {% endif %}
@@ -69,11 +73,11 @@ layout: base
   <div class="container is-max-desktop">
     <div class="hero-body">
       {% if page.teaser contains '.mp4' or page.teaser contains '.webm' %}
-      <video class="teaser-media" autoplay muted loop playsinline>
+      <video class="teaser-media" style="width: {{ page.teaser_width | default: '60%' }};" autoplay muted loop playsinline>
         <source src="{{ page.teaser | relative_url }}">
       </video>
       {% else %}
-      <img class="teaser-media" src="{{ page.teaser | relative_url }}">
+      <img class="teaser-media" style="width: {{ page.teaser_width | default: '60%' }};" src="{{ page.teaser | relative_url }}">
       {% endif %}
       {% if page.teaser_caption %}
       <p class="teaser-caption">{{ page.teaser_caption }}</p>

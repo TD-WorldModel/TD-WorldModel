@@ -16,6 +16,14 @@ body {
   font-family: 'Google Sans', sans-serif;
 }
 
+/* Tighten the gap between the title block and the teaser figure */
+.hero:not(.teaser) .hero-body {
+  padding-bottom: 1.5rem;
+}
+.hero.teaser .hero-body {
+  padding-top: 0.5rem;
+}
+
 .publication-title {
   margin-bottom: 1rem !important;
 }
@@ -38,6 +46,11 @@ body {
 .equal-contrib {
   margin-top: 0.4rem;
   color: #4a4a4a;
+}
+
+.publication-correspondence {
+  margin-top: 0.25rem;
+  color: #6a6a6a;
 }
 
 .equal-brace {
