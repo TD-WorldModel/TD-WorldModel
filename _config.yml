@@ -1,14 +1,21 @@
 # Site-wide Jekyll settings.
 # After editing this file, restart `jekyll serve` (it is not auto-reloaded).
 
-title: Contrastive World Models
-description: Contrastive is all you need.
+title: Temporal Discriminative World Models
+description: "Temporal Discriminative World Models (TDWM): a temporal discriminative JEPA objective that improves representation quality, avoids trivial collapse, and plans better over long horizons."
 
 # IMPORTANT: for a GitHub *project* page served at
 # https://td-worldmodel.github.io/TD-WorldModel/ the baseurl must match the repo name.
 # If you later use a custom domain or rename the repo to TD-WorldModel.github.io
 # (an org page served at the root), set this to "".
 baseurl: "/TD-WorldModel"
+# Absolute origin (no trailing slash). Used with baseurl by jekyll-sitemap to
+# build fully-qualified URLs like https://td-worldmodel.github.io/TD-WorldModel/.
+url: "https://td-worldmodel.github.io"
+
+# Plugins (jekyll-sitemap is on GitHub Pages' allow-list)
+plugins:
+  - jekyll-sitemap
 
 # Markdown engine
 markdown: kramdown

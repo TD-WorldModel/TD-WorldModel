@@ -2,7 +2,8 @@
 layout: project
 title: Temporal Discriminative World Models
 subtitle:
-description: A project page for Contrastive World Models.
+description: "Temporal Discriminative World Models (TDWM): a temporal discriminative JEPA objective that improves representation quality, avoids trivial collapse, and plans better over long horizons."
+image: /static/images/main_figure.png
 date: June 30, 2026
 
 # ---- Authors (the sup numbers map to the affiliations list below) ----
